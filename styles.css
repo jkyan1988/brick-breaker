@@ -1,6 +1,6 @@
 .grid {
     position: absolute;
-    width: 600px;
+    width: 560px;
     height: 300px;
     border: solid gold 2px;
 }
@@ -10,4 +10,19 @@
     width: 100px;
     height: 20px;
     background-color: red;
+}
+
+.user {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: green;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: blue;
 }
