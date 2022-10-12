@@ -7,16 +7,26 @@ class Block {
     constructor(xAxis, yAxis) {
         this.bottomLeft = [xAxis, yAxis]
         this.bottomRight = [xAxis + blockWidth, yAxis]
+        this.topLeft = [xAxis, yAxis + blockHeight]
+        this.topRight = [xAxis + blockWidth, yAxis + blockHeight]
     }
 }
 
-//draw my block
-function addBlock() {
-    const block = document.createElement('div')
-    block.classList.add('block')
-    block.style.left = '100px'
-    block.style.bottom = '50px'
-    grid.appendChild(block)
+// all my blocks
+const blocks = [
+    new Block(10, 270)
+]
+
+//draw all my block
+function addBlocks() {
+    for (let i = 0; i < blocks.length; i++) {
+        const block = document.createElement('div')
+        block.classList.add('block')
+        block.style.left = blocks[i].bottomleft[0]
+        block.style.bottom = '50px'
+        grid.appendChild(block)
+
+    }
 }
 
 addBlock()
