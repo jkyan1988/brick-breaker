@@ -1,7 +1,7 @@
 .grid {
     position: absolute;
-    width: 560px;
-    height: 300px;
+    width: 1900px;
+    height: 800px;
     border: solid gold 2px;
     margin-top: 80px;
 }
@@ -10,14 +10,14 @@
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: red;
+    background-image: linear-gradient(180deg, green, blue);
 }
 
 .user {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: green;
+    background-image: linear-gradient(180deg, yellow, purple);
 }
 
 .ball {
@@ -25,5 +25,9 @@
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: blue;
+    background-image: linear-gradient(180deg, red, blue);
+}
+
+body {
+    background-image: linear-gradient(to right, red , blue);
 }
