@@ -165,7 +165,7 @@ function checkForCollisions() {
     // check for game over
     if (ballCurrentPosition[1] <= 0) {
         clearInterval(timerId)
-        scoreDisplay.innerHTML = "Game over! YOU LOSE!!!!!!!"
+        scoreDisplay.innerHTML = "GAME! OVER! YOU LOSE!!!!!!!"
         document.removeEventListener('keydown', moveUser)
     }
 }
