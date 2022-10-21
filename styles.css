@@ -44,3 +44,9 @@ body {
     font-size: xx-large;
     font-family: 'Gemunu Libre', sans-serif;
 }
+
+.reset {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
