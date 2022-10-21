@@ -16,8 +16,6 @@ let currentPosition = userStart
 const ballStart = [910, 50]
 let ballCurrentPosition = ballStart
 
-const ballStart2 = [940, 50]
-let ballCurrentPosition2 = ballStart2
 
 //create Block
 class Block {
@@ -86,10 +84,6 @@ function drawBall() {
     ball.style.bottom = ballCurrentPosition[1] + 'px'
 }
 
-function drawBall2() {
-    ball2.style.left = ballCurrentPosition2[0] + 'px'
-    ball2.style.bottom = ballCurrentPosition2[1] + 'px'
-}
 
 // move user
 function moveUser(e) {
@@ -115,23 +109,16 @@ document.addEventListener('keydown', moveUser)
 
 // add ball
 const ball = document.createElement('div')
-const ball2 = document.createElement('div')
 ball.classList.add('ball')
-ball2.classList.add('ball2')
-drawBall2()
 drawBall()
 grid.appendChild(ball)
-grid.appendChild(ball2)
 
 
 // move the ball
 function moveBall() {
     ballCurrentPosition[0] += xDirection
     ballCurrentPosition[1] += yDirection
-    ballCurrentPosition2[0] += xDirection
-    ballCurrentPosition2[1] += yDirection
     drawBall()
-    drawBall2()
     checkForCollisions()
 }
 
@@ -183,7 +170,7 @@ function checkForCollisions() {
     // check for game over
     if (ballCurrentPosition[1] <= 0) {
         clearInterval(timerId)
-        scoreDisplay.innerHTML = "GAME! OVER! YOU LOSE!!!!!!! HIT THE REFRESH BUTTON TO RESTART!!"
+        scoreDisplay.innerHTML = "GAME! OVER! HIT THE RESET BUTTON!"
         document.removeEventListener('keydown', moveUser)
     }
 }
